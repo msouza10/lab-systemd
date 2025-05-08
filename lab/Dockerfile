@@ -17,13 +17,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 # Copia os services e o script de boot
+COPY faulty.c       /root/
 COPY faulty.service /etc/systemd/system/
 COPY stress.service /etc/systemd/system/
-COPY setup.sh /setup.sh
-RUN chmod +x /setup.sh
+COPY setup.sh /root/setup.sh
+RUN chmod +x  /root/setup.sh
 
 VOLUME [ "/sys/fs/cgroup" ]
 STOPSIGNAL SIGRTMIN+3
 
-CMD ["/setup.sh"]
+CMD ["/root/setup.sh"]
 
