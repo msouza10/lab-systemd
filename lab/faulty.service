@@ -1,15 +1,14 @@
 [Unit]
-Description=Debugging Service
+Description=Lab Solver Full – debug systemd com filhos e hints
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/false
+ExecStart=/usr/local/bin/lab-solver-full
 Restart=on-failure
-RestartSec=5
-StartLimitBurst=3
-StartLimitIntervalSec=60
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
-
