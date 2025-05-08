@@ -2,12 +2,12 @@
 set -e
 
 # Compilar o service e adicionando binario de exec.
-gcc lab-solver-full-updated.c -o /usr/local/bin/lab-solver-full
-chmod +x /usr/local/bin/lab-solver-full
+gcc /root/faulty.c -o /usr/local/bin/faulty
+chmod +x /usr/local/bin/faulty
 
 # Permite o systemd dentro do container
 exec /sbin/init
 systemctl daemon-reload
 systemctl enable --now faulty
-systemctl start stress
-systemctl start faulty
+systemctl start stress.service
+systemctl start faulty.service
