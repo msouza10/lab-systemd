@@ -14,6 +14,8 @@ Este laboratório cria um ambiente seguro e isolado para que você possa pratica
 
 Utilizamos o `Sysbox`, que permite a execução do `systemd` dentro de containers **sem precisar de modo privilegiado**, garantindo maior segurança.
 
+Construi para ser utilizado nesse artigo - [Desvendando o systemd — recursos poderosos que poucos sysadmins utilizam (e você deveria conhecer) — Debugging de Units e PIDs — Parte 2](https://medium.com/@marcos.souza101907/desvendando-o-systemd-recursos-poderosos-que-poucos-sysadmins-utilizam-e-voc%C3%AA-deveria-conhecer-eb0f33a543ca)
+
 ---
 
 ## 🧱 Estrutura do Projeto
