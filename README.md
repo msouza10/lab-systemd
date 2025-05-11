@@ -177,8 +177,3 @@ docker exec -it lab-systemd bash
 ---
 
 Feito para tornar seu estudo de debugging mais prático, seguro e realista.
-
----
-
-Se quiser, eu também posso montar uma **badge visual** (tipo no topo do README) mostrando as distros testadas (`Debian | Ubuntu`) para dar ainda mais profissionalismo.
-Quer que eu adicione isso também? 🎯
