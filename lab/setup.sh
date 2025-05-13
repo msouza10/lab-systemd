@@ -1,19 +1,13 @@
 #!/bin/bash
 set -e
 
-# Compilar o service e adicionando binario de exec.
 gcc /root/faulty.c -o /usr/local/bin/faulty
 chmod +x /usr/local/bin/faulty
-
-# Permite o systemd dentro do container
-exec /sbin/init &
-
-sleep
-
-systemctl enable --now faulty
-systemctl start stress.service
-systemctl start faulty.service
-
+/sbin/init &
+sleep 5
 systemctl daemon-reload
-
+systemctl enable faulty.service
+systemctl enable stress.service
+systemctl start faulty.service
+systemctl start stress.service
 tail -f /dev/null
