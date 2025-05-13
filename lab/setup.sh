@@ -15,3 +15,5 @@ systemctl start stress.service
 systemctl start faulty.service
 
 systemctl daemon-reload
+
+tail -f /dev/null
